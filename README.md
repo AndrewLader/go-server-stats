@@ -10,5 +10,26 @@ The Go-Server-Stats package can be used to count statistics for a web service wr
 └─┘└─┘   └─┘└─┘┴└─ └┘ └─┘┴└─   └─┘ ┴ ┴ ┴ ┴ └─┘
 ```
 
-### Usage
+### Installation
+To install the package, use the `go` command
+```
+> go get github.com/andrewlader/go-server-stats
+```
 
+### Requirements
+Requires Go >= v1.2
+
+### Usage
+Add `stats.Stats` to the web service. For example:
+```
+// the HTTP handler instance
+type httpServer struct {
+	stats   *stats.Stats
+	mux     map[string]apiHandler
+}
+```
+
+Then when an API is called, use the `Update()` method to increment the counters:
+```
+server.stats.Update(wasSuccessful, uint64(request.ContentLength), numberOfBytesWritten)
+```
