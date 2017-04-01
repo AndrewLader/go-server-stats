@@ -2,6 +2,7 @@
 
  [![Go Report Card](https://goreportcard.com/badge/github.com/andrewlader/go-server-stats)](https://goreportcard.com/report/github.com/andrewlader/go-server-stats)
 [![Build Status](https://travis-ci.org/AndrewLader/go-server-stats.svg?branch=master)](https://travis-ci.org/AndrewLader/go-server-stats)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AndrewLader/go-server-stats/blob/master/LICENSE)
 
 The Go-Server-Stats package can be used to count statistics for a web service written in Go. 
 
